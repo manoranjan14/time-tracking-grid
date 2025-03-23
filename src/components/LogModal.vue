@@ -189,4 +189,30 @@
   .log-time-button:hover {
     background-color: var(--primary-hover);
   }
+  @media (max-width: 768px) {
+  .log-time-modal {
+    width: 90%;
+    max-width: 350px;
+    padding: 16px;
+  }
+  
+  .log-time-modal h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .log-time-modal {
+    width: 95%;
+    padding: 12px;
+  }
+  
+  .search-issues input,
+  .date-input input, 
+  .time-input input,
+  .description-input input {
+    padding: 6px 8px;
+  }
+}
   </style>

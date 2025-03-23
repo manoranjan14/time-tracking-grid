@@ -70,6 +70,19 @@ body {
   }
 }
 
+@media (max-width: 768px) { /* Tablet */
+  .app-container {
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 48px 1fr;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .app-container {
+    grid-template-rows: 40px 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     padding: 0 10px;
@@ -97,5 +110,37 @@ body {
     flex-direction: column;
     gap: 12px;
   }
+}
+html, body {
+  overflow: hidden;
+}
+
+@media (max-width: 360px) {
+  .app-container {
+    grid-template-columns: 40px 1fr;
+  }
+  
+  .sidebar {
+    width: 40px;
+  }
+  
+  .sidebar-item {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.timesheet-grid table {
+  transition: all 0.3s ease;
+}
+
+
+.time-cell {
+  min-height: 40px; 
 }
 </style>

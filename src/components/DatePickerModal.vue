@@ -98,4 +98,29 @@ input[type="datetime-local"] {
 .log-time-button:hover {
   background-color: var(--primary-hover);
 }
+
+@media (max-width: 768px) {
+  .date-picker-modal {
+    width: 90%;
+    max-width: 350px;
+    padding: 16px;
+  }
+  
+  .date-picker-modal h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .date-picker-modal {
+    width: 95%;
+    padding: 12px;
+  }
+  
+  input[type="datetime-local"] {
+    padding: 6px 8px;
+    margin-bottom: 16px;
+  }
+}
 </style>

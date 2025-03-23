@@ -45,7 +45,7 @@
   </template>
   
   <script>
-  // Import Lucide icons
+ 
   import { GridIcon,  SearchIcon, BellIcon, HelpCircleIcon, SettingsIcon } from 'lucide-vue-next';
   
   export default {
@@ -61,114 +61,214 @@
   </script>
   
   <style scoped>
-  /* header.css */
-  .header {
-    grid-area: header;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    background-color: var(--background-color);
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-  }
-  
-  .header-left, .header-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    height: 24px;
-    margin-right: 20px;
-  }
-  
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 16px;
+  background-color: white;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.icon-button:hover {
+  background-color: var(--background-secondary);
+}
+
+.logo {
+  height: 24px;
+  margin-right: 8px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 16px;
+  margin-left: 8px;
+}
+
+.nav-item {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.nav-item:hover {
+  color: var(--text-color);
+}
+
+.create-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 6px 12px;
+  font-weight: 500;
+  margin-left: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.create-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--background-secondary);
+  border-radius: 3px;
+  padding: 6px 12px;
+  width: 240px;
+}
+
+.search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: var(--text-secondary);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
   .main-nav {
-    display: flex;
-    gap: 16px;
+    gap: 10px;
   }
   
   .nav-item {
-    display: flex;
-    align-items: center;
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 500;
-    gap: 4px;
-  }
-  
-  .create-button {
-    margin-left: 16px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 8px 16px;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  
-  .create-button:hover {
-    background-color: var(--primary-hover);
+    font-size: 13px;
   }
   
   .search-container {
-    display: flex;
-    align-items: center;
-    background-color: var(--background-secondary);
-    border-radius: 3px;
-    padding: 6px 12px;
-    margin-right: 16px;
-    width: 240px;
+    width: 180px;
+  }
+}
+
+@media (max-width: 840px) {
+  .nav-item:nth-child(n+4) {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 48px;
+    padding: 0 12px;
+  }
+
+  .main-nav {
+    display: none;
   }
   
-  .search-input {
-    border: none;
-    background: transparent;
-    margin-left: 8px;
-    width: 100%;
-    outline: none;
+  .create-button {
+    display: none;
+  }
+
+  .search-container {
+    width: 160px;
+  }
+  
+  .logo {
+    height: 20px;
   }
   
   .icon-button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    margin: 0 4px;
-  }
-  
-  .icon-button:hover {
-    background-color: var(--background-secondary);
+    width: 28px;
+    height: 28px;
   }
   
   .avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    overflow: hidden;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .icon-button:nth-of-type(2),
+  .icon-button:nth-of-type(3) {
+    display: none;
   }
   
-  .avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .search-container {
+    width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    height: 40px;
+    padding: 0 8px;
+  }
+  
+  .search-container {
+    display: none;
+  }
+  
+  .icon-button {
+    width: 24px;
+    height: 24px;
   }
   
   .icon {
-    width: 20px;
-    height: 20px;
-    color: var(--text-color);
+    width: 14px;
+    height: 14px;
   }
+  
+  .avatar {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* Add a search button for mobile that can trigger a full-screen search */
+  .search-button-mobile {
+    display: flex;
+  }
+}
   </style>
