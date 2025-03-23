@@ -70,14 +70,14 @@ body {
   }
 }
 
-@media (max-width: 768px) { /* Tablet */
+@media (max-width: 768px) { 
   .app-container {
     grid-template-columns: 50px 1fr;
     grid-template-rows: 48px 1fr;
   }
 }
 
-@media (max-width: 480px) { /* Mobile */
+@media (max-width: 480px) {
   .app-container {
     grid-template-rows: 40px 1fr;
   }

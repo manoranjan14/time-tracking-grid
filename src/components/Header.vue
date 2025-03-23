@@ -176,7 +176,7 @@
   object-fit: cover;
 }
 
-/* Responsive styles */
+
 @media (max-width: 1024px) {
   .main-nav {
     gap: 10px;
@@ -266,7 +266,7 @@
     height: 24px;
   }
   
-  /* Add a search button for mobile that can trigger a full-screen search */
+ 
   .search-button-mobile {
     display: flex;
   }

@@ -36,7 +36,7 @@
       </div>
     </div>
 
-    <!-- Timesheet Grid -->
+
     <div class="timesheet-grid">
       <table>
         <thead>
@@ -167,14 +167,6 @@ export default {
       totalLogged: '4.5',
       timeEntries: {
         0: '4.5', 1: '4.5', 6: '4.5', 8: '4.5', 9: '4.5', 14: '4.5', 16: '4.5'
-      }
-    },
-    {
-      id: 'ATL-0011',
-      summary: 'Issue summary',
-      totalLogged: '4.5',
-      timeEntries: {
-        0: '4.5', 1: '4.5', 6: '4.5', 8: '4.5', 14: '4.5', 16: '4.5'
       }
     },
     {
@@ -408,21 +400,6 @@ padding: 6px 12px;
 border: 1px solid var(--border-color);
 border-radius: 3px;
 cursor: pointer;
-}
-.date-range span::before {
-content: "01/Jun/24 - 30/Jun/24";
-}
-
-@media (max-width: 768px) {
-.date-range span::before {
-  content: "Jun 01 - 30, 2024";
-}
-}
-
-@media (max-width: 480px) {
-.date-range span::before {
-  content: "Jun 2024";
-}
 }
 
 .group-by {
