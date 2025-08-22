@@ -325,7 +325,7 @@ export default {
 .main-content {
 grid-area: main;
 padding: 20px;
-padding: 80px;
+padding-bottom: 80px;
 overflow: auto;
 }
 
