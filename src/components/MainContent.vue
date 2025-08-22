@@ -434,6 +434,7 @@ pointer-events: none;
 .timesheet-grid {
 overflow-x: auto;
 overflow-y: auto;
+padding-bottom: 20px;
 }
 
 table {
